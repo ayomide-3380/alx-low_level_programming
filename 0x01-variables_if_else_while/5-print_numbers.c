@@ -1,16 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - print numbers
- * Return : always (success)
+ * main - Prints the numbers since 0 to 9
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-  int a = 0;
-  while (a < 10)
-  {
-    printf("%d\n", a);
-    a++;
-  }
-  return (0);
+	int i;
+
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
+	printf("\n");
+
+	return (0);
 }
