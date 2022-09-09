@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * main - print alphabet withou e and q
+ * main - print alphabet without e and q
  * Return: always (success)
  */
 int main(void)
@@ -14,5 +14,6 @@ for (c = 'a';  c <= 'z'; c++)
 			putchar(c);
 		}
 }
-	return (0);
+putchar('\n');
+return (0);
 }
