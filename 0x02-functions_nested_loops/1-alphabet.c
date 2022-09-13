@@ -3,9 +3,7 @@
 
 /**
  * void print_alphabet(void) - print alphabet lowercase
- * 
  * Description: using a function
- * 
  * Return: Always (success)
  */
 
