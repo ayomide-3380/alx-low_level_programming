@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - prints _	putchar, and followed by a new line
+ * main - prints _putchar, and followed by a new line
  * Return: Always 0 (success)
  */
 int main(void)
-{	
+{
 	putchar('_');
 	putchar('p');
 	putchar('u');
