@@ -3,10 +3,10 @@
 /**
  * print - numbers from 0 to 9 except 2 and 4
  * Return: Alway (succes)
- */	
+ */
 void print_most_numbers(void)
 {
-		int c;
+	int c;
 
 	for (c = '0'; c <= '9'; c++)
 	{
