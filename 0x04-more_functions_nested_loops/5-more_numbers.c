@@ -2,7 +2,8 @@
 
 /**
  * print - number 0 to 14 x10
- * Return: Always (success)
+ * 
+ * Return: none
  */
 void more_numbers(void)
 {
