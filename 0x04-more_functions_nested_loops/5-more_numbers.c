@@ -7,20 +7,36 @@
  */
 void more_numbers(void)
 {
-	int number;
-	int count;
+int i;
+int first_number;
+int second_number;
+int result;
 
-	count = 0;
-	while (count < 10)
-	{
-		for (number = '0'; number <= 14; number++)
+i = 0;
+result = 0;
+while (i < 10)
+{
+while (result <= 14)
+{
+if (result < 10)
+{
+second_number = result;
+}
 
-		{
-			_putchar(number);
-		}
+else
+{
+first_number = result / 10;
+second_number = result % 10;
+_putchar (first_number + '0');
+}
 
-		count++;
-		_putchar('\n');
-	}
+_putchar (second_number + '0');
+
+result++;
+}
+i++;
+result = 0;
+_putchar ('\n');
+}
 
 }
