@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * int _strlen - print length of a string
- *@a: The strlen() function calculates the length of the string pointed to by s
- * Return: length if code is successful
+ * _strlen - Return the qty f bytes that a string has
+ * @s: The string
+ *
+ * Return: The long of the string as an integer number
  */
 int _strlen(char *s)
 {
