@@ -1,1 +1,1 @@
-# Readme for variadic functions
+project No:10 0x01-variadic_functions
