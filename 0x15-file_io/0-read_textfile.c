@@ -9,35 +9,38 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int f, length, i, res;
-	char *buffer;
+	int fd;
+	int s, t;
+	char *buf;
 
-	if (filename == NULL)
-		return (0);
-	/* open */
-
-	f = open(filename, O_RDONLY);
-
-	if (f == -1)
+	if (!filename)
 		return (0);
 
-	buffer = malloc(sizeof(char) * letters);
-	if (!buffer)
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
 		return (0);
 
-	read(f, buffer, letters);
-	buffer[letters] = '\0';
-
-	for (i = 0; buffer[i] != '\0'; i += 1)
-		length += 1;
-
-	res = close(f);
-	if (res != 0)
-		exit(-1);
-	res = write(STDOUT_FILENO, buffer, length);
-	if (res != length)
+	buf = malloc(sizeof(char) * letters);
+	if (!buf)
 		return (0);
-	free(buffer);
 
-	return (length);
+	s = read(fd, buf, letters);
+	if (s < 0)
+	{
+		free(buf);
+		return (0);
+	}
+	buf[s] = '\0';
+
+	close(fd);
+
+	t = write(STDOUT_FILENO, buf, s);
+	if (t < 0)
+	{
+		free(buf);
+		return (0);
+	}
+
+	free(buf);
+	return (t);
 }
