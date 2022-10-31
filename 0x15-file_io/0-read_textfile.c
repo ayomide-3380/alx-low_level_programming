@@ -3,8 +3,8 @@
 /**
  * read_textfile - read a text file and prints it to the standard output
  * @filename: name of the file
- * @letter: letters to read and print
- * 
+ * @letters: letters to read and print
+ *
  * Return: the actual numbers of letters or 0 if it fails
  */
 ssize_t read_textfile(const char *filename, size_t letters)
